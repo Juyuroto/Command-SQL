@@ -1,0 +1,14 @@
+services:
+  frontend:
+    container_name: sql-command
+    build:
+      context: ./frontend
+      dockerfile: dockerfile
+    restart: unless-stopped
+    ports:
+      - 3007:3007
+    volumes:
+      - ./frontend:/app:Z
+      - /app/node_modules
+    environment:
+      - "${FRONTEND_PORT}:5000"
