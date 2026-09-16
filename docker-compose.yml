@@ -1,7 +1,7 @@
 services:
   frontend:
-    container_name: proxmox-command
-    image: fubooki/command-proxmox:frontend
+    container_name: sql-command
+    image: fubooki/command-sql:frontend
     restart: unless-stopped
     ports:
       - ${FRONTEND_PORT}:${FRONTEND_PORT}
